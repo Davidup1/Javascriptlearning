@@ -127,34 +127,61 @@
 // // 函数
 // console.log(Function.toString());
 
-function Person(name,age)
-{
-    this.name = name;
-    this.age = age;
-}
+// function Person(name,age)
+// {
+//     this.name = name;
+//     this.age = age;
+// }
 
-Person.prototype.Setgender = function(gender)
-{
-    this.gender = gender;
-}
+// Person.prototype.Setgender = function(gender)
+// {
+//     this.gender = gender;
+// }
 
-function Student(name,age,score)
-{
-    Person.call(this,name,age);
-    this.score = score;
-}
+// function Student(name,age,score)
+// {
+//     Person.call(this,name,age);
+//     this.score = score;
+// }
 
-Student.prototype = new Person();
-Student.prototype.constructor = Student;
-Student.prototype.setScore = function(score)
-{
-    this.score = score;
-}
+// Student.prototype = new Person();
+// Student.prototype.constructor = Student;
+// Student.prototype.setScore = function(score)
+// {
+//     this.score = score;
+// }
 
-var s = new Student('David',20,89.0);
-console.log(s);
-s.Setgender('M');
-s.setScore(100);
-console.log(s);
+// var s = new Student('David',20,89.0);
+// console.log(s);
+// s.Setgender('M');
+// s.setScore(100);
+// console.log(s);
 
-s = null;
+// s = null;
+
+// var arr = [1,2,3];
+// var result = arr.push(4,5,6);
+// console.log(arr);
+// console.log(result);
+
+// var arr = [1,2,3];
+// var result = arr.pop();
+// console.log(arr);
+// console.log(result);
+// console.log(typeof result);
+
+// forEach()方法演示
+// var arr = [1,2,3,4,5,6,7,8];
+// arr.forEach(function(value,index,obj){
+//     console.log(value+'###'+index+'###'+obj);
+// });
+// var returnValue = arr.splice(0,2,'David','Zed');
+// console.log(arr);
+// console.log(returnValue);
+
+var arr = [2,6,1,3,11,7];
+arr.sort(function (a,b){
+    return a-b;
+});
+// 这个回调函数里面只要返回值大于零，就会发生一次左右调换。
+console.log(arr);
