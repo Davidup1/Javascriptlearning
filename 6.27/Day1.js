@@ -179,9 +179,65 @@
 // console.log(arr);
 // console.log(returnValue);
 
-var arr = [2,6,1,3,11,7];
-arr.sort(function (a,b){
-    return a-b;
-});
-// 这个回调函数里面只要返回值大于零，就会发生一次左右调换。
-console.log(arr);
+// var arr = [2,6,1,3,11,7];
+// arr.sort(function (a,b){
+//     return a-b;
+// });
+// // 这个回调函数里面只要返回值大于零，就会发生一次左右调换。
+// console.log(arr);
+
+// function fun(a, b) {
+//     console.log("a = " + a);
+//     console.log("b = " + b);
+//     console.log("fun = " + this);
+// }
+
+// var obj = {
+//     name: "obj",
+//     sayName: function () {
+//         console.log(this.name);
+//     }
+// };
+
+// fun(2, 3);
+// console.log("===============");
+// fun.call(obj, 2, 3);
+
+// function fun(a,b)
+// {
+//     //打印两个参数
+//     console.log(arguments[0]);
+//     console.log(arguments[1]);
+//     //打印参数的个数
+//     console.log(arguments.length);
+//     //打印调用这些参数的函数
+//     console.log(arguments.callee);
+//     console.log(arguments.callee==fun);
+// }
+
+// fun("a","b");
+
+//能够获取参数值对应索引值的字符
+var str = "hello world.";
+console.log(str.charAt(1));
+//能够获取参数值对应索引字符的Unicode编码
+var str = "abd";
+console.log(str.charCodeAt(0));
+//能够返回第一次出现指定字符的位置的索引值
+var str = "hello hello";
+console.log(str.indexOf("e"));
+//能够返回最后一次出现指定字符的位置的索引值
+var str = "hello hello";
+console.log(str.lastIndexOf("e"));
+//切片，对原字符串不造成影响
+var str = "abcdefghijk";
+console.log(str.slice(1,3));
+//分割，以参数里面的字符为界，分割后的结果存在一个数组里面
+var str = "hello,world.";
+console.log(str.split(","));
+//toUpperCase()将小写的字符全部转化为大写，toLowerCase()方法将所有字符都转为小写。
+var str = "hello,world";
+var STR = str.toUpperCase();
+var str = STR.toLowerCase();
+console.log(str);
+console.log(STR);
