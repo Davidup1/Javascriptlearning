@@ -217,27 +217,111 @@
 
 // fun("a","b");
 
-//能够获取参数值对应索引值的字符
-var str = "hello world.";
-console.log(str.charAt(1));
-//能够获取参数值对应索引字符的Unicode编码
-var str = "abd";
-console.log(str.charCodeAt(0));
-//能够返回第一次出现指定字符的位置的索引值
-var str = "hello hello";
-console.log(str.indexOf("e"));
-//能够返回最后一次出现指定字符的位置的索引值
-var str = "hello hello";
-console.log(str.lastIndexOf("e"));
-//切片，对原字符串不造成影响
-var str = "abcdefghijk";
-console.log(str.slice(1,3));
-//分割，以参数里面的字符为界，分割后的结果存在一个数组里面
-var str = "hello,world.";
-console.log(str.split(","));
-//toUpperCase()将小写的字符全部转化为大写，toLowerCase()方法将所有字符都转为小写。
-var str = "hello,world";
-var STR = str.toUpperCase();
-var str = STR.toLowerCase();
-console.log(str);
-console.log(STR);
+// //能够获取参数值对应索引值的字符
+// var str = "hello world.";
+// console.log(str.charAt(1));
+// //能够获取参数值对应索引字符的Unicode编码
+// var str = "abd";
+// console.log(str.charCodeAt(0));
+// //能够返回第一次出现指定字符的位置的索引值
+// var str = "hello hello";
+// console.log(str.indexOf("e"));
+// //能够返回最后一次出现指定字符的位置的索引值
+// var str = "hello hello";
+// console.log(str.lastIndexOf("e"));
+// //切片，对原字符串不造成影响
+// var str = "abcdefghijk";
+// console.log(str.slice(1,3));
+// //分割，以参数里面的字符为界，分割后的结果存在一个数组里面
+// var str = "hello,world.";
+// console.log(str.split(","));
+// //toUpperCase()将小写的字符全部转化为大写，toLowerCase()方法将所有字符都转为小写。
+// var str = "hello,world";
+// var STR = str.toUpperCase();
+// var str = STR.toLowerCase();
+// console.log(str);
+// console.log(STR);
+
+// // 这个正则表达式可以来检查一个字符串中是否含有a
+// var exp = new RegExp("a","i");
+// var str = "abcd";
+// var result = exp.test(str);
+// console.log(result);
+// //字面量创建
+// var exp = /a/i;
+// var str = "abcd";
+// var result = exp.test(str);
+// console.log(result);
+// //进阶的筛查方式
+// var exp = /a|b/;
+// var str = "Abc";
+// var reg = /a/;
+// var res1 = exp.test(str);
+// var res2 = reg.test(str);
+// console.log(res1);
+// console.log(res2);
+// var exp = /[A-z]/;
+// var str = "a123";
+// var res = exp.test(str);
+// console.log(res);
+// var reg = /[^0-9]/;
+// var str = "abcd";
+// var res = reg.test(str);
+// console.log(res);
+
+// var str = "1a2b3d4";
+// var res = str.split(/[A-z]/);
+// console.log(res);
+// var str = "1a2a3a4a5e6f7A8B9C";
+// var res = str.replace(/[A-z]/ig,"@_@");
+// console.log(res);
+
+// var str = "abbc";
+
+// var reg1 = /[A-z]{3,}/;
+// var res1 = reg1.test(str);
+// var reg2 = /a{1}/;
+// var res2 = reg2.test(str);
+
+// console.log(res1);
+// console.log(res2);
+
+// var str = "abbc";
+
+// var reg1 = /[A-z]+c?/;
+// var res1 = reg1.test(str);
+// var reg2 = /a*c?/;
+// var res2 = reg2.test(str);
+
+// console.log(res1);
+// console.log(res2);
+
+// var str = "abba";
+// var reg1 = /^a/;
+// var reg2 = /a$/;
+
+// var res1 = reg1.test(str);
+// var res2 = reg2.test(str);
+
+// console.log(res1);
+// console.log(res2);
+
+// //创建一个正则表达式，去除掉字符串中的前后的空格
+// var str = "  hello child  "
+// var reg = /^\s*|\s*$/g;
+// console.log(str);
+// str = str.replace(reg, "");
+// console.log(str);
+
+// //创建一个正则表达式，检查一个字符串中是否含有单词child
+// var str = "hello world";
+// var reg = /child+/;
+// var j = str.search(reg);
+// if (j == -1)
+// {
+//     console.log("木大！");
+// }
+// else
+// {
+//     console.log("欧拉！");
+// }
