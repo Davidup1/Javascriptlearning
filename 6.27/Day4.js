@@ -6,11 +6,11 @@
 // {
 //     console.log("拜拜了您内！");
 // }
-var person = prompt("请输入你的名字","爱吃炸鱼的薯条");
-if(person != null)
-    {
-        console.log(person);
-    }
+// var person = prompt("请输入你的名字","爱吃炸鱼的薯条");
+// if(person != null)
+//     {
+//         console.log(person);
+//     }
 
 // var btn = document.getElementById("btn");
 
@@ -21,4 +21,12 @@ if(person != null)
 //     },1000);
 // }
 
-window.resizeTo(100,100);
+// window.resizeTo(100,100);
+
+var ua = navigator.userAgent;
+console.log(ua);
+
+if(/chrome/i.test(ua))
+{
+    console.log("谷歌浏览器");
+}
