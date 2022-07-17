@@ -87,3 +87,14 @@
 //     }
 // }
 
+document.cookie = "username=zhangsan; expires=Thu, 18 Dec 2043 12:00:00 GMT";
+var cookies = document.cookie;
+console.log(cookies);
+document.cookie = "username=David";
+var cookies = document.cookie;
+console.log(cookies);
+
+var timer = new Date();
+timer.setTime(timer.getTime());
+console.log(timer.getTime());
+console.log(timer.toGMTString());
