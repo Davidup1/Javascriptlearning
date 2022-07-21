@@ -168,26 +168,113 @@
 // console.log(s.delete(5));
 // console.log(s.clear());//清除集合并返回undefined
 
-class fruit{
-    constructor (color,juicy)
+// class fruit{
+//     constructor (color,juicy)
+//     {
+//         this.color = color;
+//         this.juicy = juicy;
+//     }
+// }
+
+// class apple extends fruit{
+//     constructor(color,juicy,name,price)
+//     {
+//         super(color,juicy);
+//         this.name = name;
+//         this.price = price;
+//     }
+//     buy()
+//     {
+//         console.log(`买一个${this.name}，价格为${this.price}元一斤。`);
+//     }
+// }
+
+// const apple1 = new apple("红色",true,"苹果",5);
+// apple1.buy();
+
+// let x = 0Xff;
+// let o = 0O777;
+// let d = 100;
+// let b = 0B1010;
+
+// console.log(x);
+// console.log(o);
+// console.log(d);
+// console.log(b);
+
+// const apple1 = 
+//       {
+//           price : 100,
+//           host : "David",
+//           name : "xiaohong"
+//       }
+
+// const apple2 = 
+//       {
+//           price : 10,
+//           host : "Zed",
+//           med : true
+//       }
+
+// console.log(Object.assign(apple1,apple2));
+
+// var a = 
+// {
+//     name:"David",
+//     gender:"M"
+// }
+
+// var b = a;
+// b.name = "Zed";
+// console.log(a);
+// console.log(b);
+
+//from
+var arr = [1,2,3];
+var arr1 = Array.from(arr);
+arr[0] = 100;
+console.log(arr);
+console.log(arr1);
+//concat
+var arr = [1,2,3];
+var arr1 = arr.concat();
+arr[0] = 100;
+console.log(arr);
+console.log(arr1);
+//slice
+var arr = [1,2,3];
+var arr1 = arr.slice();
+arr[0] = 100;
+console.log(arr);
+console.log(arr1);
+//扩展运算符
+var arr = [1,2,3];
+var arr1 = [...arr];
+arr[0] = 100;
+console.log(arr);
+console.log(arr1);
+
+var a = 
+{
+    name:"David",
+    gender:"M",
+    birthday:
     {
-        this.color = color;
-        this.juicy = juicy;
+        year:"2003",
+        month:"7",
+        day:"27"
     }
 }
 
-class apple extends fruit{
-    constructor(color,juicy,name,price)
-    {
-        super(color,juicy);
-        this.name = name;
-        this.price = price;
-    }
-    buy()
-    {
-        console.log(`买一个${this.name}，价格为${this.price}元一斤。`);
-    }
-}
+// var b = 
+// {
+//     ...a
+// }
 
-const apple1 = new apple("红色",true,"苹果",5);
-apple1.buy();
+// console.log(a);
+// console.log(b);
+
+var b = JSON.parse(JSON.stringify(a));
+
+console.log(a);
+console.log(b);
